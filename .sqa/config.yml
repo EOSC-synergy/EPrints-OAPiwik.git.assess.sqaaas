@@ -1,0 +1,46 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/openaire/EPrints-OAPiwik:
+      branch: master
+      repo: https://github.com/openaire/EPrints-OAPiwik.git
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/openaire/EPrints-OAPiwik git:
+        commands:
+        - /usr/bin/env sh .sqa/script.beady-alizarin-olm.sh
+        container: qc.acc_cheeky-harlequin-wasp
+  QC.Doc:
+    repos:
+      github.com/openaire/EPrints-OAPiwik find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.queasy-cinnabar-stingray.sh
+        container: qc.doc_seedy-sangria-fly
+      github.com/openaire/EPrints-OAPiwik git:
+        commands:
+        - /usr/bin/env sh .sqa/script.cheeky-vermilion-capybara.sh
+        container: qc.doc_muggy-brown-russel
+      github.com/openaire/EPrints-OAPiwik markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.shaky-orange-tarantula.sh
+        container: qc.doc_pokey-yellow-chimpanzee
+  QC.Lic:
+    repos:
+      github.com/openaire/EPrints-OAPiwik licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.slimy-charcoal-quetzal.sh
+        container: qc.lic_crabby-beige-whale
+  QC.Ver:
+    repos:
+      github.com/openaire/EPrints-OAPiwik get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.baggy-smalt-barb.sh
+        container: qc.ver_shaggy-ochre-weasel
+timeout: 5400
