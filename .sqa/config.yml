@@ -15,32 +15,32 @@ sqa_criteria:
     repos:
       github.com/openaire/EPrints-OAPiwik git:
         commands:
-        - /usr/bin/env sh .sqa/script.slaphappy-chestnut-antelope.sh
-        container: qc.acc_shaggy-magnolia-lemur
+        - /usr/bin/env sh .sqa/script.randy-linen-mist.sh
+        container: qc.acc_bumpy-lime-uakari
   QC.Doc:
     repos:
       github.com/openaire/EPrints-OAPiwik find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.frumpy-grey-badger.sh
-        container: qc.doc_tasty-purple-setter
+        - /usr/bin/env sh .sqa/script.lousy-rust-zonkey.sh
+        container: qc.doc_tasty-purple-otter
       github.com/openaire/EPrints-OAPiwik git:
         commands:
-        - /usr/bin/env sh .sqa/script.wimpy-chocolate-akita.sh
-        container: qc.doc_cheeky-apricot-affenpinscher
+        - /usr/bin/env sh .sqa/script.crabby-cinnabar-ocelot.sh
+        container: qc.doc_sleepy-alizarin-affenpinscher
       github.com/openaire/EPrints-OAPiwik markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.gamy-amaranth-bulldog.sh
-        container: qc.doc_hilly-ultramarine-retriever
+        - /usr/bin/env sh .sqa/script.shaggy-khaki-moose.sh
+        container: qc.doc_gloppy-turquoise-wolf
   QC.Lic:
     repos:
       github.com/openaire/EPrints-OAPiwik licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.dorky-cream-liger.sh
-        container: qc.lic_flimsy-magenta-moorhen
+        - /usr/bin/env sh .sqa/script.grumpy-goldenrod-wildebeest.sh
+        container: qc.lic_wheezy-amethyst-caterpillar
   QC.Ver:
     repos:
       github.com/openaire/EPrints-OAPiwik get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.gummy-black-buffalo.sh
-        container: qc.ver_pokey-maroon-seal
+        - /usr/bin/env sh .sqa/script.squirrely-turquoise-husky.sh
+        container: qc.ver_sleepy-chocolate-vulture
 timeout: 5400
